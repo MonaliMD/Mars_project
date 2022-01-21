@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
+
 
 namespace MarsFramework.Pages
 {
@@ -9,6 +11,7 @@ namespace MarsFramework.Pages
         public ShareSkill()
         {
             PageFactory.InitElements(Global.GlobalDefinitions.driver, this);
+            
         }
 
         //Click on ShareSkill Button
@@ -95,6 +98,8 @@ namespace MarsFramework.Pages
 
         internal void EnterShareSkill()
         {
+            
+
             ShareSkillButton.Click();
 
             Title.SendKeys("Testing");
@@ -121,16 +126,16 @@ namespace MarsFramework.Pages
             StartDateDropDown.Click();
             //need to select date from the date picker
 
-            EndDateDropDown.Click();
+            //EndDateDropDown.Click();
             //need to select date from the date picker
 
             Days.Click();
 
             
-            StartTimeDropDown.Click();
+            //StartTimeDropDown.Click();
             //need to select time
 
-            EndTimeDropDown.Click();
+            //EndTimeDropDown.Click();
             //need to slect time
 
             SkillTradeOption.Click();

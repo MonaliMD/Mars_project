@@ -1,7 +1,10 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
+using static MarsFramework.Global.GlobalDefinitions;
 
-namespace MarsFramework.Pages
+namespace MarsFramework
+
 {
     class SignIn
     {
@@ -28,10 +31,17 @@ namespace MarsFramework.Pages
         private IWebElement LoginBtn { get; set; }
 
         #endregion
-
         internal void LoginSteps()
         {
-           
+            // IWebDriver driver = new ChromeDriver();
+            // driver.Navigate().GoToUrl("http://localhost:5000/Home");
+
+            driver.Navigate().GoToUrl("http://localhost:5000/Home");
+
+            SignIntab.Click();
+            Email.SendKeys("mvpstudio.qa@gmail.com");
+            Password.SendKeys("SydneyQa2018");
+            LoginBtn.Click();
         }
 
        
